@@ -1,0 +1,21 @@
+# Ignorar archivos y carpetas de configuración local
+wp-config.php
+
+# Ignorar las carpetas de subida de medios (uploads)
+wp-content/uploads/
+
+# Ignorar archivos de registro de errores
+wp-content/debug.log
+
+# Ignorar la carpeta de caché de objetos (object cache)
+wp-content/cache/
+
+# Ignorar las carpetas de caché de plugins y temas
+wp-content/plugins/*/cache/
+wp-content/themes/*/cache/
+
+# Ignorar los archivos de configuración de IDE y sistemas
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
