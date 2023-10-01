@@ -1,0 +1,40 @@
+
+---Downloaded files---
+The import files for: Formula Original were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = https://awplife.com/demo/formula
+Data file = /var/www/html/awplife/public_html/demo/wp-content/uploads/sites/118/2022/09/demo-content-import-file_2022-09-13__09-54-35.xml
+Widget file = /var/www/html/awplife/public_html/demo/wp-content/uploads/sites/118/2022/09/demo-widgets-import-file_2022-09-13__09-54-35.json
+Customizer file = /var/www/html/awplife/public_html/demo/wp-content/uploads/sites/118/2022/09/demo-customizer-import-file_2022-09-13__09-54-35.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar widget area : 
+
+Search - Search - Imported
+Recent Posts - No Title - Imported
+Archives - Archives - Imported
+Search - No Title - Imported
+Recent Comments - No Title - Imported
+Archives - No Title - Imported
+Categories - No Title - Imported
+Meta - No Title - Imported
+
+Footer Widget First Column : 
+
+Text - Quick contact info - Imported
+
+Footer Widget Second Column : 
+
+Categories - Categories - Imported
+
+Footer Widget Third Column : 
+
+Archives - Archives - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!

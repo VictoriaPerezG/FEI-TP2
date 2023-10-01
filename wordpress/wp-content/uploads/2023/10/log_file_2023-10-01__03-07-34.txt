@@ -1,0 +1,75 @@
+
+---Downloaded files---
+The import files for: Formula Original were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/FEI-TP2/wordpress
+Data file = C:\xampp\htdocs\FEI-TP2\wordpress/wp-content/uploads/2023/10/demo-content-import-file_2023-10-01__03-07-34.xml
+Widget file = C:\xampp\htdocs\FEI-TP2\wordpress/wp-content/uploads/2023/10/demo-widgets-import-file_2023-10-01__03-07-34.json
+Customizer file = C:\xampp\htdocs\FEI-TP2\wordpress/wp-content/uploads/2023/10/demo-customizer-import-file_2023-10-01__03-07-34.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Sidebar widget area : 
+
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+Búsqueda - Search - Widget already exists
+Entradas recientes - No Title - Imported
+Archivos - Archives - Widget already exists
+Búsqueda - No Title - Imported
+Comentarios recientes - No Title - Imported
+Archivos - No Title - Imported
+Categorías - No Title - Imported
+Meta - No Title - Imported
+
+Footer Widget First Column : 
+
+Bloque - No Title - Imported
+Texto - No Title - Imported
+
+Footer Widget Second Column : 
+
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+
+Footer Widget Third Column : 
+
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+
