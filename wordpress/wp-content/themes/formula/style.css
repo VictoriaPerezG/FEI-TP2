@@ -996,6 +996,7 @@ body.locked .theme-wrapper {
     gap: 2rem;
     max-width: 100%;
     height: auto;
+    background-color: #F5CDFF ;
 }
 
 .header .navbar {
