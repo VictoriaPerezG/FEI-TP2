@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:tns="http://www.example.com/soap/gen"
            targetNamespace="http://www.example.com/soap/gen"
            elementFormDefault="qualified">
 
     <!-- Find All Localidades by Provincia-->
-    <xsd:element name="getLocalidadesResponse">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="localidades" type="tns:Localidad" maxOccurs="unbounded"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+    <xs:element name="getLocalidadesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="localidades" type="tns:Localidad" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
     <!-- Find All Provincias-->
-    <xsd:element name="getProvinciasRequest">
-        <xsd:complexType>
-            <xsd:sequence>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="getProvinciasResponse">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="provincias" type="tns:Provincia" maxOccurs="unbounded"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+    <xs:element name="getProvinciasRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getProvinciasResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="provincias" type="tns:Provincia" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
     <!-- Find by provincia name -->
-    <xsd:element name="getProvinciaRequest">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="id" type="xsd:long"/>
-                <xsd:element name="nombre" type="xsd:string"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="getProductResponse">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="product" type="tns:Provincia"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+    <xs:element name="getProvinciaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+                <xs:element name="nombre" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="tns:Provincia"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-        <xsd:complexType name="Response">
-            <xsd:sequence>
-                <xsd:element name="int" type="xsd:int"/>
-                <xsd:element name="status" type="xsd:string"/>
-            </xsd:sequence>
-        </xsd:complexType>
+        <xs:complexType name="Response">
+            <xs:sequence>
+                <xs:element name="int" type="xs:int"/>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
 
 
-        <xsd:complexType name="Provincia">
-            <xsd:sequence>
-                <xsd:element name="id" type="xsd:long"/>
-                <xsd:element name="nombre" type="xsd:string"/>
-                <xsd:element name="localidades" type="tns:ListaLocalidades"/>
-            </xsd:sequence>
-        </xsd:complexType>
+        <xs:complexType name="Provincia">
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="localidades" type="tns:ListaLocalidades"/>
+            </xs:sequence>
+        </xs:complexType>
 
-    <xsd:complexType name="ListaLocalidades">
-        <xsd:sequence>
-            <xsd:element name="localidad" type="tns:Localidad" minOccurs="0" maxOccurs="unbounded"/>
-        </xsd:sequence>
-    </xsd:complexType>
+    <xs:complexType name="ListaLocalidades">
+        <xs:sequence>
+            <xs:element name="localidad" type="tns:Localidad" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
 
-        <xsd:complexType name="Localidad">
-            <xsd:sequence>
-                <xsd:element name="id" type="xsd:long"/>
-                <xsd:element name="nombre" type="xsd:string"/>
-                <xsd:element name="provincia" type="tns:Provincia"/>
-            </xsd:sequence>
-        </xsd:complexType>
+        <xs:complexType name="Localidad">
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="provincia" type="tns:Provincia"/>
+            </xs:sequence>
+        </xs:complexType>
 
-</xsd:schema>
+</xs:schema>
