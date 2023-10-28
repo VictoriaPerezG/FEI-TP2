@@ -37,13 +37,6 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="getProductResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="product" type="tns:Provincia"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
 
         <xs:complexType name="Response">
             <xs:sequence>
