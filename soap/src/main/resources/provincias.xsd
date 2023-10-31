@@ -5,6 +5,13 @@
            elementFormDefault="qualified">
 
     <!-- Find All Localidades by Provincia-->
+    <xs:element name="getLocalidadesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="provincia" type="tns:Provincia"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="getLocalidadesResponse">
         <xs:complexType>
             <xs:sequence>
@@ -28,29 +35,10 @@
         </xs:complexType>
     </xs:element>
 
-    <!-- Find by provincia name -->
-    <xs:element name="getProvinciaRequest">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="id" type="xs:long"/>
-                <xs:element name="nombre" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-        <xs:complexType name="Response">
-            <xs:sequence>
-                <xs:element name="int" type="xs:int"/>
-                <xs:element name="status" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-
-
         <xs:complexType name="Provincia">
             <xs:sequence>
                 <xs:element name="id" type="xs:long"/>
                 <xs:element name="nombre" type="xs:string"/>
-                <xs:element name="localidades" type="tns:ListaLocalidades"/>
             </xs:sequence>
         </xs:complexType>
 
