@@ -17,6 +17,12 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+	<!-- Dependencia recomendada -->
+    	<dependency>
+        	<groupId>org.springframework.ws</groupId>
+        	<artifactId>spring-ws-core</artifactId>
+   		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -67,7 +73,6 @@
 			<version>8.0.32</version>
 		</dependency>
 
-
 	</dependencies>
 
 	<build>
@@ -76,6 +81,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.1.5</version> <!-- Reemplaza con la versión de Spring Boot que estás utilizando -->
 				<configuration>
 					<excludes>
 						<exclude>
