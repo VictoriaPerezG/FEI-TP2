@@ -1,140 +1,110 @@
-<?xml version="1.0"?>
-<definitions name="LocalidadesService"
-             targetNamespace="http://www.example.com/soap/gen"
-             xmlns:tns="http://www.example.com/soap/gen"
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"
-             xmlns:soap="http://schemas.xmlsoap.org/wsdl/">
-    <types>
-        <schema targetNamespace="http://www.example.com/soap/gen"
-                xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                elementFormDefault="qualified">
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://www.example.com/soap/gen" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.com/soap/gen" targetNamespace="http://www.example.com/soap/gen">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.example.com/soap/gen">
             <!-- Find All Localidades by Provincia-->
-            <element name="getLocalidadesResponse">
-                <complexType>
-                    <sequence>
-                        <element name="localidades" type="tns:Localidad" maxOccurs="unbounded"/>
-                    </sequence>
-                </complexType>
-            </element>
-
+            <xs:element name="getLocalidadesRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="provincia" type="tns:Provincia"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getLocalidadesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="localidades" type="tns:Localidad"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
             <!-- Find All Provincias-->
-            <element name="getProvinciasRequest">
-                <complexType>
-                    <sequence>
-                    </sequence>
-                </complexType>
-            </element>
-            <element name="getProvinciasResponse">
-                <complexType>
-                    <sequence>
-                        <element name="provincias" type="tns:Provincia" maxOccurs="unbounded"/>
-                    </sequence>
-                </complexType>
-            </element>
-
-            <!-- Find by provincia name -->
-            <element name="getProvinciaRequest">
-                <complexType>
-                    <sequence>
-                        <element name="id" type="xs:long"/>
-                        <element name="nombre" type="xs:string"/>
-                    </sequence>
-                </complexType>
-            </element>
-
-            <complexType name="Response">
-                <sequence>
-                    <element name="int" type="xs:int"/>
-                    <element name="status" type="xs:string"/>
-                </sequence>
-            </complexType>
-
-
-            <complexType name="Provincia">
-                <sequence>
-                    <element name="id" type="xs:long"/>
-                    <element name="nombre" type="xs:string"/>
-                    <element name="localidades" type="tns:ListaLocalidades"/>
-                </sequence>
-            </complexType>
-
-            <complexType name="ListaLocalidades">
-                <sequence>
-                    <element name="localidad" type="tns:Localidad" minOccurs="0" maxOccurs="unbounded"/>
-                </sequence>
-            </complexType>
-
-            <complexType name="Localidad">
-                <sequence>
-                    <element name="id" type="xs:long"/>
-                    <element name="nombre" type="xs:string"/>
-                    <element name="provincia" type="tns:Provincia"/>
-                </sequence>
-            </complexType>
-
-        </schema>
-    </types>
-    <message name="GetProvinciasRequest">
-        <part name="body" element="tns:getProvinciasRequest"/>
-    </message>
-    <message name="GetProvinciasResponse">
-        <part name="body" element="tns:getProvinciasResponse"/>
-    </message>
-    <message name="GetLocalidadesResponse">
-        <part name="body" element="tns:getLocalidadesResponse"/>
-    </message>
-    <message name="GetProvinciaRequest">
-        <part name="body" element="tns:getProvinciaRequest"/>
-    </message>
-    <portType name="LocalidadesServicePortType">
-        <operation name="GetProvincias">
-            <input message="tns:GetProvinciasRequest"/>
-            <output message="tns:GetProvinciasResponse"/>
-        </operation>
-        <operation name="GetLocalidades">
-            <input message="tns:GetProvinciasRequest"/>
-            <output message="tns:GetLocalidadesResponse"/>
-        </operation>
-        <operation name="GetProvincia">
-            <input message="tns:GetProvinciaRequest"/>
-            <output message="tns:GetProvinciasResponse"/>
-        </operation>
-    </portType>
-    <binding name="LocalidadesSoapBinding" type="tns:LocalidadesServicePortType">
+            <xs:element name="getProvinciasRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getProvinciasResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="provincias" type="tns:Provincia"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="Provincia">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:long"/>
+                    <xs:element name="nombre" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ListaLocalidades">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="localidad" type="tns:Localidad"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Localidad">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:long"/>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="provincia" type="tns:Provincia"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getLocalidadesResponse">
+        <wsdl:part element="tns:getLocalidadesResponse" name="getLocalidadesResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getProvinciasRequest">
+        <wsdl:part element="tns:getProvinciasRequest" name="getProvinciasRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getLocalidadesRequest">
+        <wsdl:part element="tns:getLocalidadesRequest" name="getLocalidadesRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getProvinciasResponse">
+        <wsdl:part element="tns:getProvinciasResponse" name="getProvinciasResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="provinciasPort">
+        <wsdl:operation name="getLocalidades">
+            <wsdl:input message="tns:getLocalidadesRequest" name="getLocalidadesRequest">
+            </wsdl:input>
+            <wsdl:output message="tns:getLocalidadesResponse" name="getLocalidadesResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getProvincias">
+            <wsdl:input message="tns:getProvinciasRequest" name="getProvinciasRequest">
+            </wsdl:input>
+            <wsdl:output message="tns:getProvinciasResponse" name="getProvinciasResponse">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="provinciasPortSoap11" type="tns:provinciasPort">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="GetProvincias">
-            <soap:operation soapAction="http://www.example.com/GetProvincias"/>
-            <input>
+        <wsdl:operation name="getLocalidades">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="getLocalidadesRequest">
                 <soap:body use="literal"/>
-            </input>
-            <output>
+            </wsdl:input>
+            <wsdl:output name="getLocalidadesResponse">
                 <soap:body use="literal"/>
-            </output>
-        </operation>
-        <operation name="GetLocalidades">
-            <soap:operation soapAction="http://www.example.com/GetLocalidades"/>
-            <input>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getProvincias">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="getProvinciasRequest">
                 <soap:body use="literal"/>
-            </input>
-            <output>
+            </wsdl:input>
+            <wsdl:output name="getProvinciasResponse">
                 <soap:body use="literal"/>
-            </output>
-        </operation>
-        <operation name="GetProvincia">
-            <soap:operation soapAction="http://www.example.com/GetProvincia"/>
-            <input>
-                <soap:body use="literal"/>
-            </input>
-            <output>
-                <soap:body use="literal"/>
-            </output>
-        </operation>
-    </binding>
-    <service name="LocalidadesService">
-        <documentation>Localidades Service</documentation>
-        <port name="LocalidadesPort" binding="tns:LocalidadesSoapBinding">
-            <soap:address location="http://www.example.com/localidades"/>
-        </port>
-    </service>
-</definitions>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="provinciasPortService">
+        <wsdl:port binding="tns:provinciasPortSoap11" name="provinciasPortSoap11">
+            <soap:address location="http://localhost:8080/ws"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
