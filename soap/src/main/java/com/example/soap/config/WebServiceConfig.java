@@ -21,6 +21,7 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
+
 @EnableWs
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
@@ -34,7 +35,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     // return new ServletRegistrationBean(servlet, "/ws/*");
     // }
 
-    // Funcion nueva para proporcionar un tipo generico de dato para solucionar problemas de sintaxis
+    // Funcion nueva para proporcionar un tipo generico de dato para solucionar problemas de sintaxis que se dan en el VSC
     @Bean
     public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
